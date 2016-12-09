@@ -4,9 +4,11 @@ public class Edge {
 	public int id;
 	public int src;
 	public int dst;
+	public double weight;
+	public double bw;
 	public double delay;
-	public int bw;
 	
+	Edge(int id, int src, int dst, double weight, double bw, double delay){
 		this.id=id;
 		this.src=src;
 		this.dst=dst;
