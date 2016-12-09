@@ -7,16 +7,16 @@ public class Edge {
 	public double delay;
 	public int bw;
 	
-	Edge(int id, int src, int dst, double delay, int bw){
 		this.id=id;
 		this.src=src;
 		this.dst=dst;
-		this.delay=delay;
+		this.weight=weight;
 		this.bw=bw;
+		this.delay=delay;
 	}
 	
 	public String printEdge(){
-		String s=this.id+" "+this.src+" "+this.dst+" "+this.delay+" "+this.bw;
+		String s=this.id+" "+this.src+" "+this.dst+" "+this.weight+" "+this.bw+" "+this.delay;
 		return s;
 	}
 	
@@ -38,6 +38,8 @@ public class Edge {
         if (delay != other.delay)
             return false;
         if (bw != other.bw)
+        	return false;
+        if (weight != other.weight)
         	return false;
         return true; /* do not include latency */
     }

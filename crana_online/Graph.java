@@ -41,13 +41,14 @@ public class Graph {
             while (line != null) {
             	strAry = line.split(" ");
             	
-            	Integer id=count;
-            	Integer src=Integer.parseInt(strAry[0]);
-            	Integer dst=Integer.parseInt(strAry[1]);
-            	Double delay=Double.parseDouble(strAry[2]);
-            	Integer capacity=Integer.parseInt(strAry[3]);
+            	int id=count;
+            	int src=Integer.parseInt(strAry[0]);
+            	int dst=Integer.parseInt(strAry[1]);
+            	double weight=Double.parseDouble(strAry[2]);
+            	double capacity=Double.parseDouble(strAry[3]);
+            	double delay=0.0;
             	
-            	Edge e=new Edge(id,src,dst,delay,capacity);
+            	Edge e=new Edge(id,src,dst,weight,capacity,delay);
             	incL.add(e);
             	count++;
             	line = br.readLine();

@@ -7,8 +7,21 @@ public class Main {
 		Graph g=new Graph(topo_address);
 		System.out.println("Graph Init Completed");
 		
+		//路由模块启动
+		DelayRouting dr = new DelayRouting();
+		//LoadBalanceRouting lbr = new LoadBalanceRouting();
+		//EnergyEfficiencyRouting eer = new EnergyEfficiencyRouting();
+		//TroughputRouting tr = new TroughputRouting();
 		
-		double distance=g.dijkstra(0,3);
+		//提方案
+		
+		//评价方案
+		
+		//选择方案
+		
+		//部署
+		
+		double distance=dr.dijkstra(0,3,g);
 		System.out.println("distance = "+distance);
 	}
 }
