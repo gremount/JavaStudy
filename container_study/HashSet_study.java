@@ -1,4 +1,4 @@
-package basic_study;
+package container_study;
 
 import java.util.HashSet;
 import java.util.Iterator;
